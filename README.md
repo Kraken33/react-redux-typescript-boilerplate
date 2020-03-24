@@ -1,4 +1,17 @@
-cThis project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+
+React base boilerplate based on:
+- TypeScript
+- Redux
+- Redux Saga
+- CRA
+
+After installing you have ready template with: 
+- configuration Redux store
+- configuration Redux Saga
+- flexible routing
+
+And it all with TypeScript and unit test covering
 
 ## Available Scripts
 
