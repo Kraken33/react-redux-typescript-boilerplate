@@ -1,3 +1,4 @@
+import React from 'react';
 import loadableComponent from "@loadable/component";
 import pMinDelay from "p-min-delay";
 
@@ -6,10 +7,10 @@ const _cache: any = {};
 export const loadable = (
   cacheId: string,
   importFn: () => Promise<any>,
-  fallbackFn: () => any,
+  fallbackFn: () => React.ReactNode,
   delay = 500
 ): any => {
-  let x: any;
+  let x = fallbackFn();
   // eslint-disable-next-line no-return-assign
   return loadableComponent(
     () => {
@@ -25,8 +26,7 @@ export const loadable = (
     _cache[cacheId]
       ? undefined
       : {
-        fallback:
-            ((x = fallbackFn()), typeof x === "function" ? (x as any)() : x)
+        fallback: (typeof x === "function" ? x() : x)
       }
   );
 };

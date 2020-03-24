@@ -1,28 +1,26 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { Empty as EmptyLayout } from "layouts/empty";
+import { Layouts } from "layouts";
 import {
-  ELayoutTypes
+    Routes
 } from "./types";
 
-const buildRoutes = (routes: any) => Object.keys(routes).map((key: string) => {
-  const { layout, page: Page, ...rest } = routes[key];
+const buildRoutes = (routes: Routes) => {
+    const routeNames = Object.keys(routes) as Array<keyof Routes>;
+return routeNames.map((key) => {
+    const {layout, page: Page, ...rest} = routes[key];
+    const Layout = Layouts[layout];
 
-  switch (layout) {
-    case ELayoutTypes.EMPTY:
-    default:
-      return (
-        <Route
-          key={rest.path}
-          {...rest}
-          render={(matchProps) => (
-            <EmptyLayout>
-              <Page {...matchProps} />
-            </EmptyLayout>
-          )}
-        />
-      );
-  }
+    return <Route
+        key={rest.path}
+        {...rest}
+        render={(matchProps) => (
+            <Layout>
+                <Page {...matchProps} />
+            </Layout>
+        )}
+    />
 });
+};
 
 export { buildRoutes };

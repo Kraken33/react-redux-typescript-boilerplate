@@ -14,16 +14,11 @@ const http: AxiosInstance = axios.create({
   }
 });
 
-const nodeHttp: AxiosInstance = axios.create({
-  baseURL: '/'
-});
-
 const requestInterceptor = (config: AxiosRequestConfig) => {
   return config;
 };
 
 http.interceptors.request.use(requestInterceptor);
-nodeHttp.interceptors.request.use(requestInterceptor);
 
 http.interceptors.response.use(
   (response: AxiosResponse<{ data: any }>): AxiosResponse => response,
@@ -32,4 +27,4 @@ http.interceptors.response.use(
   }
 );
 
-export { http, nodeHttp };
+export { http };

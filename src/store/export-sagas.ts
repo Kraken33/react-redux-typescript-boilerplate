@@ -1,1 +1,1 @@
-export { entrySaga as contact } from "./home/sagas";
+export { entrySaga as home } from "./home/sagas";

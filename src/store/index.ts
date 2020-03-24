@@ -10,7 +10,8 @@ import { IStoreState } from "./types";
 const composeEnhancers = composeWithDevTools({});
 const sagaMiddleware = createSagaMiddleware();
 const INITIAL_STATE = window.__INITIAL_STATE__ || {};
-const configureStore = (preloadedState = INITIAL_STATE) => {
+const configureStore: (preloadedState?: {[k: string]: any})=>Store<IStoreState> =
+    (preloadedState = INITIAL_STATE) => {
   const store = createStore(
     createRootReducer(history),
     preloadedState,
@@ -20,7 +21,7 @@ const configureStore = (preloadedState = INITIAL_STATE) => {
   return store;
 };
 
-const store: Store<IStoreState> = configureStore() as any;
+const store = configureStore();
 
 sagaMiddleware.run(sagas);
 
