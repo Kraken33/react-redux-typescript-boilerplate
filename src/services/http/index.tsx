@@ -6,7 +6,7 @@ import axios, {
 } from "axios";
 
 const http: AxiosInstance = axios.create({
-  baseURL: '/',
+  baseURL: "/",
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json",

@@ -1,10 +1,10 @@
 import "assets/scss/index.scss";
 import "assets/scss/index.scss";
 
+import { APP } from "constants/index";
 import React, { Fragment } from "react";
 import Helmet from "react-helmet";
 import { RoutesSwitch } from "routes";
-import { APP } from 'constants/index';
 
 import { IProps } from "./types";
 

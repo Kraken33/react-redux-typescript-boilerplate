@@ -1,3 +1,1 @@
-export interface IProps {
-  children: any;
-}
+export interface IProps {}

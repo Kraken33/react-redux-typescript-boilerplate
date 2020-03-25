@@ -1,6 +1,6 @@
-import React from 'react';
 import loadableComponent from "@loadable/component";
 import pMinDelay from "p-min-delay";
+import React from "react";
 
 const _cache: any = {};
 
@@ -11,7 +11,6 @@ export const loadable = (
   delay = 500
 ): any => {
   let x = fallbackFn();
-  // eslint-disable-next-line no-return-assign
   return loadableComponent(
     () => {
       if (_cache[cacheId]) {
@@ -26,7 +25,7 @@ export const loadable = (
     _cache[cacheId]
       ? undefined
       : {
-        fallback: (typeof x === "function" ? x() : x)
-      }
+          fallback: typeof x === "function" ? x() : x
+        }
   );
 };

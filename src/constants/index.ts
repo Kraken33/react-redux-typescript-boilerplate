@@ -1,1 +1,1 @@
-export { default as APP } from './app';
+export { default as APP } from "./app-config";

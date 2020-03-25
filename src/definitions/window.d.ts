@@ -1,7 +1,7 @@
 import { AxiosInstance } from "axios";
 import { Store } from "redux";
-import { Storage } from "services/storage";
 import { IApi } from "services/api/types";
+import { Storage } from "services/storage";
 import { IStoreState } from "store/types";
 
 export declare global {

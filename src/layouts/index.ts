@@ -1,10 +1,10 @@
 import { Empty as EmptyLayout } from "./empty";
-import { LayoutsType } from './types';
+import { LayoutsType } from "./types";
 
 export enum ELayouts {
-    'EmptyLayout' = 'EmptyLayout'
+  "EmptyLayout" = "EmptyLayout"
 }
 
 export const Layouts: LayoutsType = {
-    EmptyLayout: EmptyLayout
+  EmptyLayout: EmptyLayout
 };

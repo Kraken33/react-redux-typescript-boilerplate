@@ -1,6 +1,7 @@
-import { Routes } from "./types";
+import { ELayouts } from "layouts";
+
 import { pages } from "./pages";
-import { ELayouts } from 'layouts';
+import { Routes } from "./types";
 
 const routes: Routes = {
   home: {

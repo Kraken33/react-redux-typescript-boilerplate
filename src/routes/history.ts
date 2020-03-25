@@ -1,6 +1,5 @@
-import { createBrowserHistory } from "history";
+import { createBrowserHistory, History } from "history";
 
-const history = createBrowserHistory({ basename: "/" });
-const getLocation = () => history.location.pathname;
+const history: History = createBrowserHistory({ basename: "/" });
 
-export { history, getLocation };
+export { history };

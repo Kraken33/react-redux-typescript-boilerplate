@@ -1,5 +1,5 @@
-import { IHomeApi } from './home/types';
+import { IHomeApi } from "./home/types";
 
 export interface IApi {
-home: IHomeApi;
+  home: IHomeApi;
 }
