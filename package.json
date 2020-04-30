@@ -53,7 +53,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test-no-interactive": "react-scripts test --watchAll=false",
-    "test-coverage": "react-scripts test --coverage",
+    "test-coverage": "eact-scripts test --coverage",
     "eject": "react-scripts eject",
     "server": "serve -s build -l 4000",
     "lint": "eslint src/*/*.*",
@@ -95,11 +95,6 @@
     "prettier": "^1.19.1",
     "prettier-plugin-import-sort": "0.0.3",
     "react-test-renderer": "^16.13.1"
-  },
-  "jest": {
-    "setupFilesAfterEnv": [
-      "./setupTests.ts"
-    ]
   },
   "husky": {
     "hooks": {
