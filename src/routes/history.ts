@@ -1,5 +1,7 @@
 import { createBrowserHistory, History } from "history";
 
-const history: History = createBrowserHistory({ basename: "/" });
+import { BASE_PATH } from './consts';
+
+const history: History = createBrowserHistory({ basename: BASE_PATH });
 
 export { history };

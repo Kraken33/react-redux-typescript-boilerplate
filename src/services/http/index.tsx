@@ -5,8 +5,10 @@ import axios, {
   AxiosResponse
 } from "axios";
 
+import { BASE_API_URL } from 'consts';
+
 const http: AxiosInstance = axios.create({
-  baseURL: "/",
+  baseURL: BASE_API_URL,
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json",

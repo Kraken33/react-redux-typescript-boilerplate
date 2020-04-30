@@ -11,7 +11,9 @@ const routes: Routes = {
     get breadcrumb() {
       return "Home";
     },
-    link: () => "/",
+    link() {
+      return this.path;
+    },
     exact: true
   }
 };
